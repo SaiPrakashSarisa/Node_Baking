@@ -1,0 +1,122 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+/* styling for the page header */
+.maindiv {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.headerdiv h1 {
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+.headerdiv {
+  background-color: rgb(29, 90, 148);
+  color: orangered;
+  width: 100%;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 0px 30px rgb(0, 0, 0);
+}
+
+.namediv {
+  position: absolute;
+  right: 30px;
+  top: 35px;
+  display: inline-flex;
+  color: white;
+  /* font-size: 20px; */
+}
+.dropdownbtn {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+#dropdown {
+  position: absolute;
+  top: 60px;
+  right: 36px;
+  display: none;
+  background-color: #fff;
+}
+
+.dropdownmenu li {
+  list-style: none;
+  width: 65px;
+  padding: 5px 10px 5px 10px;
+}
+.dropdownmenu a {
+  text-decoration: none;
+  color: black;
+}
+
+/* styling for the main content */
+.bodydiv {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(29, 90, 148, 0.9);
+  width: 100%;
+}
+
+.bodydiv a {
+  text-decoration: none;
+}
+
+.fields,
+.btnfields {
+  border: none;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: rgb(29, 90, 148, 0.6);
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  box-shadow: 2px 2px 15px rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.card img {
+  position: relative;
+  z-index: 0;
+  height: 300px;
+  width: 300px;
+  opacity: 0.6;
+}
+
+.card h1 {
+  position: absolute;
+  z-index: 10px;
+}
+
+.fields legend {
+  font-size: small;
+  color: white;
+}
+
+/* footer div styling */
+.footerdiv {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(29, 90, 148);
+}

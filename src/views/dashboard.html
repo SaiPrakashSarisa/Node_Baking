@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Login</title>
+    <link rel="stylesheet" href="/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="maindiv">
+      <div class="headerdiv">
+        <h1>Dashboard</h1>
+        <div class="namediv">
+          <p id="user"></p>
+          <button
+            id="dropdownbtn"
+            onclick="displayMenu()"
+            class="dropdownbtn"
+            type="button"
+          ></button>
+        </div>
+      </div>
+      <div id="dropdown">
+        <div id="dropdownmenu" class="dropdownmenu">
+          <ul>
+            <li>
+              <a href="#">Profile</a>
+            </li>
+            <li>
+              <a href="/logout">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bodydiv">
+        <a href="/savings"
+          ><fieldset id="savingscard" class="card">
+            <img
+              src="https://cdn.pixabay.com/photo/2014/10/23/10/10/dollars-499481_960_720.jpg"
+              alt="savings"
+            />
+            <h1>Savings</h1>
+          </fieldset></a
+        >
+        <a href="/creditcards"
+          ><fieldset class="card">
+            <img
+              src="https://cdn.pixabay.com/photo/2018/07/13/18/54/credit-card-3536348_960_720.jpg"
+              alt="savings"
+            />
+            <h1>Credit Cards</h1>
+          </fieldset></a
+        >
+        <a href="/loans"
+          ><fieldset class="card"><h1>Loans</h1></fieldset></a
+        >
+        <a href="/investments"
+          ><fieldset class="card">
+            <img
+              src="https://cdn.pixabay.com/photo/2015/10/31/12/00/financial-equalization-1015305__340.jpg"
+              alt="savings"
+            />
+            <h1>Investements</h1>
+          </fieldset></a
+        >
+      </div>
+      <div class="footerdiv">
+        <p>copyrights recieved @ 2023-2080</p>
+      </div>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

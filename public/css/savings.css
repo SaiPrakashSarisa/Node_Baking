@@ -1,0 +1,184 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+/* styling for the page header */
+.maindiv {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.headerdiv h1 {
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.headerdiv {
+  background-color: rgb(29, 90, 148);
+  /* color: rgb(16, 155, 236); */
+  color: orangered;
+  width: 100%;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 0px 30px rgb(0, 0, 0);
+}
+
+.namediv {
+  position: absolute;
+  right: 30px;
+  top: 35px;
+  display: inline-flex;
+  color: white;
+  /* font-size: 20px; */
+}
+/* styling for the main content */
+.bodydiv {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(29, 90, 148, 0.9);
+  width: 100%;
+  overflow: scroll;
+}
+
+/* footer div styling */
+.footerdiv {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(29, 90, 148);
+}
+
+/* body styling */
+
+.tabdiv {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+.balance {
+  color: white;
+  /* background-color: green; */
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.balance p {
+  padding: 20px;
+}
+.transactions {
+  width: 80%;
+  /* height: 500px; */
+  display: flex;
+  /* overflow: scroll; */
+  justify-content: center;
+  align-items: center;
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+th {
+  color: white;
+}
+.actionsdiv {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionsdiv h2 {
+  padding: 15px 10px 15px 10px;
+  box-shadow: 1px 1px 5px white;
+  border-radius: 8px;
+  color: white;
+}
+
+.actionbtns {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+}
+
+.butns {
+  margin: 15px 0px 15px 0px;
+  background-color: transparent;
+  color: white;
+  width: 100px;
+  padding: 8px 5px 8px 5px;
+  border-color: transparent;
+  border-radius: 10px;
+}
+
+#depbtn:hover {
+  color: rgb(255, 255, 255);
+  border-color: rgb(41, 173, 41);
+}
+
+#witbtn:hover {
+  color: rgb(255, 255, 255);
+  border-color: rgb(241, 32, 5);
+}
+
+#trabtn:hover {
+  color: rgb(255, 255, 255);
+  border-color: rgb(255, 174, 0);
+}
+.transactions {
+  width: 80%;
+}
+
+/* floating division */
+
+.floatingcards {
+  background-color: rgb(255, 255, 255, 0.4);
+  height: 300px;
+  width: 400px;
+  position: absolute;
+  display: none;
+  border-radius: 20px;
+}
+
+.titles {
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.headers {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.closediv {
+  width: 10%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* in put fields */
+.actionfields {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

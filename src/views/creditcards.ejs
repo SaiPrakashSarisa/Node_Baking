@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savings</title>
+    <link rel="stylesheet" href="/css/creditcards.css" />
+      
+</head>
+  </head>
+  <body>
+    <div class="maindiv">
+      <div class="headerdiv">
+        <h1>Credit Cards</h1>
+        <div class="namediv">
+          <p id="user"><%= cards[0].user %></p>
+          <button
+            id="dropdownbtn"
+            onclick="displayMenu()"
+            class="dropdownbtn"
+            type="button"
+          ></button>
+        </div>
+      </div>
+      <div id="dropdown">
+        <div id="dropdownmenu" class="dropdownmenu">
+          <ul>
+            <li>
+              <a href="#">Profile</a>
+            </li>
+            <li>
+              <a href="/logout">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bodydiv">
+        
+        <% for(var i=0; i<cards.length; i++) { %>
+        <div id="popup<%=i+1%>" class="floatingcards">
+          <div class="titles">
+            <div class="headers">
+              <h2>Card Name</h2>
+            </div>
+            <div  class="closediv">
+              <span id="popup<%=i+1%>" onclick="removeForm(this.id)">❌</span>
+            </div>
+          </div>
+          
+          <div class="actionfields">
+              <h4><%= cards[i].cnum1 %> <%= cards[i].cnum2 %> <%= cards[i].cnum3 %> <%= cards[i].cnum4 %></h4>
+              <div id="bts">
+                <input type="button" value="Swipe" onclick="swipe(`<%= i+1 %>`, `<%= cards.length %>`)"> 
+                <input type="button" value="Pay due ammount" onclick="paydue(`<%= i+1 %>`)"> 
+                <input type="button" value="Remove Card" onclick="removeCard(`<%= i+1 %>`)">
+              </div>
+              <div id="actions<%=i+1%>" class="actions">
+                <form id="actionlink<%=i+1%>" action="#" method="post">
+                <input type="text" name="amount" required>
+                <input type="hidden" name="cardnumber" value="<%= cards[i].cardnumber %>">
+                <input type="submit" value="Ok">
+                </form>
+              </div>
+              <table>
+                <tr>
+                  <td>Limit</td>
+                  <td>:</td>
+                  <td><%= cards[i].limit %></td>
+                </tr>
+                <tr>
+                  <td>Available Amount</td>
+                  <td>:</td>
+                  <td><%= cards[i].availableAmount %></td>
+                </tr>
+                <tr>
+                  <td>Due Amount</td>
+                  <td>:</td>
+                  <td><%= cards[i].dueamount %></td>
+                </tr>
+                <tr>
+                  <td>Due Date</td>
+                  <td>:</td>
+                  <td><%= cards[i].duedate %></td>
+                </tr>
+              </table>
+            
+          </div>
+        </div>
+        <% } %>  
+        
+
+        <div id="addCard" class="floatingcards">
+          <div class="titles">
+            <div class="headers">
+              <h2>Add New Card</h2>
+            </div>
+            <div  class="closediv">
+              <span onclick="removeForm()">❌</span>
+            </div>
+          </div>
+          
+          <div class="actionfields">
+            <form action="/addCard" method="post">
+              <p>Enter Card Number</p>
+              <input class="aflds"type="text" name="cardnumber" required>
+              <p>Enter cvv number</p>
+              <input class="aflds"type="text" name="cvv" required><br>
+              <p>Enter expire date</p>
+              <input class="aflds" type="text" name="expdate" required>
+              <p>Enter Card Type</p>
+              <input class="aflds" type="text" name="type" required>
+              <input type="submit" value="Add" />
+            </form>
+          </div>
+        </div>
+       <div class="btndiv">
+          <button type="button" onclick="addCard()">Add Card</button>
+       </div>
+       <div class="cardsdiv">
+        <% if(typeof(cards) === "object") { %>
+        <% for(var i=0; i<cards.length; i++) { %>
+          <div  class="card" id="<%=cards[i].card%>" data-length = "<%= cards.length %>" onclick="showdetails(this.id, this.dataset.length)">
+            <div  class="cardNum">
+              <div><%= cards[i].cnum1 %></div>
+              <div><%= cards[i].cnum2 %></div>
+              <div><%= cards[i].cnum3 %></div>
+              <div><%= cards[i].cnum4 %></div>
+            </div>
+            <div class="name">
+              <p><%= cards[i].user %></p>
+            </div>
+            <div class="validity">
+              <span id="ctype">EXP.DATE</span> <span><%= cards[i].expdate %></span>
+            </div>
+            <div class="type">
+              <p ><%= cards[i].type %></p>
+            </div>
+          </div>
+        <% } %>
+        <% } else { %>
+          <div class="card">
+            <div class="name">
+              <p> <%= cards %></p>
+            </div>
+          </div>   
+        <% } %>
+       </div>
+      </div>
+      <div class="footerdiv">
+        <p>copyrights recieved @ 2023-2080</p>
+      </div>
+    </div>
+    <script src="creditcards.js"></script>
+  </body>
+</html>

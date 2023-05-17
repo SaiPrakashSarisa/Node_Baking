@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savings</title>
+    <link rel="stylesheet" href="/css/savings.css" />
+      
+</head>
+  </head>
+  <body>
+    <div class="maindiv">
+      <div class="headerdiv">
+        <h1 id="He">Savings</h1>
+        <div class="namediv">
+          <p id="user"><%= username %></p>
+        </div>
+      </div>
+      <div class="bodydiv">
+        <!-- deposit money -->
+        <div id="deposit" class="floatingcards">
+          <div class="titles">
+            <div class="headers">
+              <h2>Deposit Money</h2>
+            </div>
+            <div onclick ="closeForm()" class="closediv">
+              ❌
+            </div>
+          </div>
+          <div class="actionfields">
+            <form action="/deposit" method="post">
+              <p>Enter amount to Add</p>
+              <input class="aflds"type="text" name="amount">
+            <input type="submit" value="Deposit">
+            </form>
+          </div>
+        </div>
+        <!-- withdraw money -->
+        <div id="withdraw" class="floatingcards">
+          <div class="titles">
+            <div class="headers">
+              <h2>Withdraw Money</h2>
+            </div>
+            <div onclick ="closeForm()" class="closediv">
+              ❌
+            </div>
+          </div>
+          <div class="actionfields">
+           
+            <form action="/withdraw" method="post">
+              <p>Enter amount to Withdraw</p>
+              <input type="hidden" value="<%= transactions[transactions.length-1].balance%>" name="totalBalance">
+              <input class="aflds"type="text" name="amount">
+              <input type="submit" value="Withdraw">
+            </form>
+           
+          </div>
+        </div>
+        <!-- transfer money -->
+        <div id="transfer" class="floatingcards">
+          <div class="titles">
+            <div class="headers">
+              <h2>Transfer Money</h2>
+            </div>
+            <div onclick ="closeForm()" class="closediv">
+              ❌
+            </div>
+          </div>
+          
+          <div class="actionfields">
+            <form action="/transfer" method="post">
+              <p>Enter Account Number</p>
+              <input type="text" name="accnum">
+              <p>Enter amount to Transfer</p>
+              <input class="aflds"type="text" name="amount">
+              <input type="hidden" value="<%= transactions[transactions.length-1].balance%>" name = "totalBalance">
+              <input type="submit" value="Transfer" />
+            </form>
+          </div>
+        </div>
+        <div class="tabdiv">
+            <div class="balance">
+              <div>
+                <p> Current Available Balance : ₹ <%= transactions[transactions.length-1].balance%> /- </p>
+              </div>
+            </div>
+            <div class="transactions">
+                <table >
+                    <thead>
+                      <tr>
+                        <th >Date & Time</th>
+                        <th >Debit / Credit</th>
+                        <th >Balance</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <% for (var i=transactions.length-1; i>=0; i--){ %>
+                        <tr>
+                            <td><%= transactions[i].date +" "+ transactions[i].time %></td>
+                            <% if(transactions[i].type === 'debit') {%>
+                              <td style="color:red;"><%= transactions[i].amount %></td>
+                            <%}%>
+                            <% if(transactions[i].type === 'credit') {%>
+                              <td style="color:rgb(22, 190, 45);"><%= transactions[i].amount %></td>
+                            <%}%>
+                            <td><%= transactions[i].balance %></td>
+                        </tr>
+                        <%}%>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        <div class="actionsdiv">
+          <h2>Choose Transaction</h2>
+
+          <div class="actionbtns">
+            <button id="depbtn" onclick="deposit()" class="butns">Deposit</button>
+            <button id="witbtn" onclick="widthdraw()" class="butns">Withdraw</button>
+            <button id="trabtn" onclick="transfer()" class="butns">Transfer</button>
+          </div>
+        </div>
+      </div>
+      <div class="footerdiv">
+        <p>copyrights recieved @ 2023-2080</p>
+      </div>
+    </div>
+    <script src="savings.js"></script>
+  </body>
+</html>

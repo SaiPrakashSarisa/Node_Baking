@@ -1,0 +1,111 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+/* styling for the page header */
+.maindiv {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.headerdiv h1 {
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+.headerdiv {
+  background-color: rgb(29, 90, 148);
+  color: orangered;
+  width: 100%;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 0px 30px rgb(255, 255, 255);
+}
+/* styling for the main content */
+.bodydiv {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(29, 90, 148, 0.9);
+  width: 100%;
+}
+
+.fields,
+.btnfields {
+  border: none;
+}
+
+.formdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: rgb(29, 90, 148, 0.6);
+  padding: 50px;
+  width: 300px;
+  height: 400px;
+  box-shadow: 2px 2px 15px rgb(255, 255, 255);
+}
+.fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.msg {
+  color: rgb(255, 145, 0);
+  font-size: 15px;
+}
+#passerr {
+  font-size: 12px;
+}
+
+.fields legend {
+  font-size: small;
+  color: white;
+}
+
+.fields input {
+  outline: none;
+  border-radius: 15px;
+  margin: 10px;
+  width: 200px;
+  padding: 5px 10px 5px 10px;
+  background-color: rgb(29, 90, 148, 0.8);
+  color: white;
+}
+
+.btnfields {
+  display: flex;
+  justify-content: center;
+  /* background-color: aqua; */
+  padding: 10px;
+}
+.btn {
+  background-color: rgb(16, 155, 236);
+  color: white;
+  padding: 5px 15px 5px 15px;
+  width: 150px;
+  border-color: transparent;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.forminner {
+  display: flex;
+  border: none;
+  margin: 30px;
+}
+
+/* footer div styling */
+.footerdiv {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(29, 90, 148);
+}

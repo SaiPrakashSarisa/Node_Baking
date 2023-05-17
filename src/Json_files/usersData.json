@@ -1,0 +1,52 @@
+[
+  {
+    "firstname": "Jyothi Sai Prakash",
+    "lastname": "Sarisa",
+    "account": "202302134100",
+    "username": "saiprakash08",
+    "password": "sai@123",
+    "email": "saiprakashsarisa@gmail.com",
+    "contact": "8099308161",
+    "address": "Anakapalli"
+  },
+  {
+    "firstname": "Tirumalesh",
+    "lastname": "Iyalapaka",
+    "account": "202302134449",
+    "username": "tirumalesh009",
+    "password": "tiru@123",
+    "email": "tirumalesh@gmail.com",
+    "contact": "9948546899",
+    "address": "Sagarnagar"
+  },
+  {
+    "firstname": "Anusha",
+    "lastname": "Gutti",
+    "account": "202303040959",
+    "username": "anusha005",
+    "password": "anu@123",
+    "email": "anusha@gmail.com",
+    "contact": "9949709571",
+    "address": "Vizianagaram"
+  },
+  {
+    "firstname": "Jay Surya",
+    "lastname": "Sarisa",
+    "account": "202303105719",
+    "username": "suryasarisa",
+    "password": "surya@123",
+    "email": "surya@gmail.com",
+    "contact": "9030193157",
+    "address": "Anakapalli"
+  },
+  {
+    "firstname": "Srijanya",
+    "lastname": "Duvvi",
+    "account": "202303140146",
+    "username": "srijanya02",
+    "password": "sri@123",
+    "email": "srijanya@gmail.com",
+    "contact": "9885988697",
+    "address": "Rajhamundry, Andhrapardesh"
+  }
+]

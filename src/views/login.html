@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Login</title>
+    <!-- <style></style> -->
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <div class="maindiv">
+      <div class="headerdiv">
+        <h1>Bank Login / Register</h1>
+      </div>
+      <div class="bodydiv">
+        <fieldset class="formdiv">
+          <form action="/login" method="post">
+            <fieldset class="fields">
+              <legend>USERNAME</legend>
+              <input type="text" id="username" name="username" />
+            </fieldset>
+            <fieldset class="fields">
+              <legend>PASSWORD</legend>
+              <input type="password" id="password" name="password" />
+            </fieldset>
+            <fieldset class="btnfields">
+              <input type="submit" class="btn" value="login" />
+              <input
+                type="button"
+                class="btn"
+                onclick="window.location.href='/registerform'"
+                value="Register"
+              />
+            </fieldset>
+          </form>
+          <fieldset class="fields">
+            <p id="errmsg"></p>
+          </fieldset>
+        </fieldset>
+      </div>
+      <div class="footerdiv">
+        <p>copyrights recieved @ 2023-2080</p>
+      </div>
+    </div>
+    <script src="/login.js"></script>
+  </body>
+</html>

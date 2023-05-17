@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Login</title>
+    <link rel="stylesheet" href="/css/register.css" />
+  </head>
+  <body>
+    <div class="maindiv">
+      <div class="headerdiv">
+        <h1 id="heading">Bank Login / Register</h1>
+      </div>
+      <div class="bodydiv">
+        <!-- form section starts here -->
+        <fieldset class="formdiv">
+          <form action="/adduser" method="post">
+            <!-- name section -->
+            <fieldset class="forminner">
+              <fieldset class="fields">
+                <legend>FIRST NAME</legend>
+                <input
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  onblur="validatefname()"
+                  required
+                />
+                <span id="fnerr" class="msg"></span>
+              </fieldset>
+              <fieldset class="fields">
+                <legend>LAST NAME</legend>
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  onblur="validatelname()"
+                  required
+                />
+                <span id="lnerr" class="msg"></span>
+              </fieldset>
+            </fieldset>
+            <!-- username and password section starts here -->
+            <fieldset class="forminner">
+              <fieldset class="fields">
+                <legend>USER NAME</legend>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  onblur="validateusername()"
+                  required
+                />
+                <span class="msg" id="unerr"></span>
+              </fieldset>
+              <fieldset class="fields">
+                <legend>PASSWORD</legend>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  onblur="validatepass()"
+                  required
+                />
+                <span class="msg" id="passerr"></span>
+              </fieldset>
+              <fieldset class="fields">
+                <legend>RE-ENTER PASSWORD</legend>
+                <input
+                  type="password"
+                  id="repassword"
+                  name="repassword"
+                  onblur="validaterepass()"
+                  required
+                />
+                <span class="msg" id="repasserr"></span>
+              </fieldset>
+            </fieldset>
+            <!-- email and phone number section  -->
+            <fieldset class="forminner">
+              <fieldset class="fields">
+                <legend>EMAIL</legend>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  onblur="validateemail()"
+                  required
+                />
+                <span class="msg" id="emailerr"></span>
+              </fieldset>
+              <fieldset class="fields">
+                <legend>PHONE NUMBER</legend>
+                <input
+                  type="text"
+                  id="contact"
+                  name="contact"
+                  onblur="validatePh()"
+                  required
+                />
+                <span class="msg" id="pherr"></span>
+              </fieldset>
+              <fieldset class="fields">
+                <legend>Address</legend>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  onblur=" validateaddress()"
+                  required
+                />
+                <span class="msg" id="adderr"></span>
+              </fieldset>
+            </fieldset>
+            <fieldset class="btnfields">
+              <input type="submit" class="btn" id="regbtn" value="Register" />
+              <input
+                type="button"
+                class="btn"
+                onclick="window.location.href='/'"
+                value="Login"
+              />
+            </fieldset>
+          </form>
+        </fieldset>
+      </div>
+      <!-- page footer division starts here  -->
+      <div class="footerdiv">
+        <p>copyrights received @ 2023-2080</p>
+      </div>
+    </div>
+    <script src="/reg.js"></script>
+  </body>
+</html>
